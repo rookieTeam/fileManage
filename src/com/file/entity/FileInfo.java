@@ -7,7 +7,7 @@ public class FileInfo {
 	
 	private String fileName; //文件夹名称
     private Date createTime;//创建时间
-    private Integer size;//文件夹大小 
+    private Long size;//文件夹大小 
     private Date updateTime;//修改时间
     private String location;//位置
     private Integer type;//类型
@@ -22,10 +22,10 @@ public class FileInfo {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	public Integer getSize() {
+	public Long getSize() {
 		return size;
 	}
-	public void setSize(Integer size) {
+	public void setSize(Long size) {
 		this.size = size;
 	}
 	public Date getUpdateTime() {
@@ -71,4 +71,8 @@ public class FileInfo {
 		this.fileCount = fileCount;
 	}
     
+	public String toString(){
+		return "fileName:"+this.fileName+" size:"+this.size+" location:"+this.location;
+	}
+	
 }

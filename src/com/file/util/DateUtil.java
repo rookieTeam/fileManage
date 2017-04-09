@@ -1,6 +1,7 @@
 package com.file.util;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class DateUtil {
@@ -17,5 +18,10 @@ public class DateUtil {
 	   SimpleDateFormat pSdf=new SimpleDateFormat("EEE MMM DD HH:mm:ss yyyy",Locale.ENGLISH);
 	   SimpleDateFormat fSdf=new SimpleDateFormat(defaultDateTime);
 	   return fSdf.format(pSdf.parse(dateTimeStr));
+   }
+   
+   public static Date strForamatDate(String dateTimeStr) throws Exception{
+	   SimpleDateFormat fSdf=new SimpleDateFormat(defaultDateTime);
+	   return fSdf.parse(dateTimeStr);
    }
 }
