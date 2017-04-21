@@ -9,7 +9,8 @@ import com.file.util.FileUtil;
 
 public class FileService {
 	public static void main(String[] args) {
-		String filePath ="F:\\work\\studay\\C";
+		//String filePath ="F:\\work\\studay\\C";
+		String filePath ="F:\\work\\File\\fileManage\\fileManage\\src";
 		FileService fs = new FileService();
 		try {
 			fs.calculateFile(filePath);
@@ -38,8 +39,9 @@ public class FileService {
 				}else{
 					 FileInfo fileChild = new FileInfo();
 					 initFileInfo(fileChild, file2);
-					 fileInfo.setSize(file2.length());
+					 fileChild.setSize(file2.length());
 					folderSize += file2.length();
+					System.out.println(fileChild.toString());
 				}
 			}
     		 fileInfo.setSize(folderSize); 
